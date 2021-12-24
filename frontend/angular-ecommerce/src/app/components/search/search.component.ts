@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -9,9 +10,11 @@ import { Router } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   constructor(private router: Router) { }
-
+  totalPrice: number = 0.00;
   ngOnInit() {
   }
+
+ 
 
   doSearch(value: string) {
     console.log(`value=${value}`);
