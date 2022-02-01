@@ -22,10 +22,13 @@ export class CartStatusComponent implements OnInit {
     this.cartService.totalPrice.subscribe(
       data => this.totalPrice = data
     );
-
+      // this.totalQuantity = this.cartService.totalQuantityTest;
+      // console.log(`totalQuantity value in cart status component ${this.totalQuantity}`)
     // subscribe to the cart totalQuantity
     this.cartService.totalQuantity.subscribe(
       data => this.totalQuantity = data
+      
     );
+    console.log(`totalQuantity value in cart status component ${this.totalQuantity}`)
   }
 }

@@ -4,16 +4,13 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 
-//import java.util.Set;
-
-//import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-//import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
 
@@ -29,6 +26,9 @@ public class ProductCategory {
     @Column(name = "category_name")
     private String categoryName;
     
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category",targetEntity = Product.class)
+    private Set<Product> products;
+    
     public ProductCategory() {
     	
     }
@@ -38,8 +38,7 @@ public class ProductCategory {
     	this.categoryName = categoryName;    	
     }
  
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category",targetEntity = Product.class)
-    private Set<Product> products;
+    
 
 	public Long getId() {
 		return id;
