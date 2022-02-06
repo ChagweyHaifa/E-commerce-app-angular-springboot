@@ -30,13 +30,13 @@ export class CartService {
     if (this.cartItems.length > 0) {
       // find the item in the cart based on item id
       for(let tempCartItem of this.cartItems){
-        if(tempCartItem.id === theCartItem.id){
+        if(tempCartItem.productId === theCartItem.productId){
           existingCartItem = tempCartItem;
           alreadyExistsInCart = true;
           break;
         }
       }
-      // existingCartItem = this.cartItems.find( tempCartItem => tempCartItem.id === theCartItem.id );
+      // existingCartItem = this.cartItems.find( tempCartItem => tempCartItem.productId === theCartItem.productId );
 
       // check if we found it
       // alreadyExistsInCart = (existingCartItem != undefined);
@@ -101,7 +101,7 @@ export class CartService {
   remove(theCartItem: CartItem) {
 
     // get index of item in the array
-    const itemIndex = this.cartItems.findIndex( tempCartItem => tempCartItem.id === theCartItem.id );
+    const itemIndex = this.cartItems.findIndex( tempCartItem => tempCartItem.productId === theCartItem.productId );
 
     // if found, remove the item from the array at the given index
     if (itemIndex > -1) {
