@@ -38,8 +38,6 @@ export class CartService {
       }
       // existingCartItem = this.cartItems.find( tempCartItem => tempCartItem.productId === theCartItem.productId );
 
-      // check if we found it
-      // alreadyExistsInCart = (existingCartItem != undefined);
     }
 
     if (alreadyExistsInCart) {
