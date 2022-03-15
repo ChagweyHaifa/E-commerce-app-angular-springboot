@@ -1,6 +1,5 @@
 package springbootecommerce.entity;
 
-import java.util.Set;
 
 import javax.persistence.*;
 

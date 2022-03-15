@@ -42,8 +42,5 @@ public class Customer {
             order.setCustomer(this);
         }
     }
-
-	
-    
-    
+	  
 }
